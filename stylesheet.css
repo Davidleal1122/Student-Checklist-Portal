@@ -1,0 +1,431 @@
+/* Define @import rules at the top of the stylesheet */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Home Page */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 1000px;
+    max-width: 1300px;
+    background: url('images/bg2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    
+    
+}
+
+.headerLabel,
+.checklist-container {
+    margin: 90px auto;
+    max-width: 1300px;  
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+    padding: 10px; 
+    text-align: center; 
+}
+
+.header img {
+    width: 110px;
+    height: auto;
+}
+
+
+.header, .header-program {
+    margin-bottom: 50px; 
+    margin-top: 20px; 
+    text-align: center;
+    color: whitesmoke !important; 
+}
+    
+.header h3, .header-program h3, .header-program h2, .header-program h1 {
+    font-weight: bold;
+    margin: 1px 0;
+    font-size: 20px; 
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: whitesmoke !important; 
+}
+
+.studentTable {
+    background: transparent;
+    backdrop-filter: blur(50px);
+    border: 2px solid rgba(255, 255, 255, .2);
+}
+
+
+
+.studentTable th {
+    background: #50C878;
+    padding: 15px;
+    font-size: 17px; 
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.studentTable td {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px; 
+    background: white;
+    
+}
+
+/* Checklist Page */
+/* Side Bar */
+.menu-btn {
+    position: fixed;
+    color: whitesmoke;
+    font-size: 30px;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+}
+
+.side-bar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    width: 290px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property: left;
+}
+
+
+.side-bar.active {
+    left: 0;
+}
+
+.side-bar .menu {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.side-bar .menu .item {
+    position: relative;
+    cursor: pointer;
+}
+
+.side-bar .menu .item a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+}
+
+.side-bar .menu .item a:hover {
+    background: gray;
+    transition: 0.3s ease;
+}
+
+.side-bar .menu .item i {
+    margin-right: 15px;
+}
+
+.side-bar .menu .item a .dropdown {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+
+.side-bar .menu .item .sub-menu {
+    background: rgba(255, 255, 255, 0.1);
+    display: none;
+}
+
+.side-bar .menu .item .sub-menu a {
+    padding-left: 80px;
+}
+
+.side-bar h1 {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    display: block;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.student-info p {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+    color: white; 
+    display: block;
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+}
+
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+.close-btn {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+
+.side-bar {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.1);
+}
+
+.side-bar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.side-bar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.side-bar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.side-bar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Search Bar */
+
+.headerLabel, .search-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    color: whitesmoke;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    
+    
+}
+
+
+.search-container {
+    margin: 50px auto 10px; /* Adjusted margin */
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.highlight {
+    background-color: aqua;
+    font-weight: bold;
+}
+
+.headerLabel {
+    z-index: 1001;
+}
+
+/*Checklist Page*/
+
+#mainContainer {
+    margin-top: 100px;
+    max-width: calc(100% - 150px);
+    background: transparent;
+    backdrop-filter: blur(50px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    height: 910px;
+    
+}
+
+#mainContainer.active {
+    transform: translateX(150px);
+    transition: transform 0.3s ease;
+}
+
+.headerLabel {
+    margin: 10px auto 10px;
+    max-width: 1300px;
+    margin-bottom
+    : 20px;
+    background-color: #275c38;
+    color: whitesmoke;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.headerLabel2 {
+    margin: 10px auto 10px;
+    max-width: 1300px;
+    margin-bottom: 20px;
+    background-color: #275c38;
+    color: whitesmoke;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.tableContainer {
+    margin: 90px auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    max-width: 1300px;
+    background-color: whitesmoke;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.tableContainer h2 {
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 40px;
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Copperplate', 'Fantasy';
+}
+
+.tableContainer h3 {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    font-size: 28px;
+    color: black;
+    font-family: 'Copperplate', 'Fantasy';
+    text-align: left;
+}
+
+.checklist-container {
+    margin: 90px auto;
+    max-width: 1300px;  
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+    padding: 10px; 
+    text-align: center; 
+}
+
+.checklistTable {
+    margin-bottom: 20px;
+}
+
+.checklistTable th {
+    background: #50C878;
+    margin: 15px auto;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Copperplate', 'Fantasy';
+}
+
+.checklistTable td {
+    margin: 15px auto;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Copperplate', 'Fantasy';
+}
+
+.checklistTable th:nth-child(8),
+.checklistTable td:nth-child(8),
+.checklistTable th:nth-child(9),
+.checklistTable td:nth-child(9) {
+    display: none;
+}
+
+.headerLabel img {
+    width: 110px;
+    height: auto;
+}
+
+.header, .header-program {
+    margin-bottom: 50px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.header h3, .header-program h3, .header-program h2, .header-program h1 {
+    font-weight: bold;
+    margin: 1px 0;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    text-align: center;
+}
+
+.studentTable {
+    background: transparent;
+    backdrop-filter: blur(50px);
+    border: 2px solid rgba(255, 255, 255, .2);
+}
+
+.studentTable th {
+    background: #50C878;
+    padding: 15px;
+    font-size: 17px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.studentTable td {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    background: white;
+}
+
+.content-wrapper {
+    margin-top: 50px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.1);-y: auto;
+    max-height: calc(100vh - 120px);
+}
+
+.content-wrapper::-webkit-scrollbar {
+    width: 10px;
+}
+
+.content-wrapper::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.content-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
